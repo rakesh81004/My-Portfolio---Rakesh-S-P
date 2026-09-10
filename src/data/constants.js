@@ -10,7 +10,7 @@ export const Bio = {
     "I am a passionate full-stack developer, creative designer, and visual storyteller, always eager to explore new challenges. With a strong problem-solving mindset, I craft efficient code, design visually compelling experiences, and occasionally bring ideas to life through film and media.",
   github: "https://github.com/rakesh81004",
   resume:
-    "https://drive.google.com/file/d/1UqAqaMWNG2obmfuPZhbOF0Xp5nfcblKj/view?usp=sharing",
+    "https://drive.google.com/file/d/1Wo1E69uFr3tlf-ZtaLJHFqUWdVg9gC1j/view?usp=sharing",
   linkedin: "www.linkedin.com/in/rakesh-sp-37863b253",
   twitter: "https://x.com/RakeshSP679388",
   insta: "https://www.instagram.com/rakesh_s_p___/",

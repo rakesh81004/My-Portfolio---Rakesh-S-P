@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import EarthCanvas from "../canvas/Earth";
@@ -118,10 +118,55 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+`;
+
+const Spinner = styled.div`
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
+
+const StatusMessage = styled.div`
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: ${({ $variant }) =>
+    $variant === "success" ? "#2ecc71" : "#ff6b6b"};
+  background: ${({ $variant }) =>
+    $variant === "success"
+      ? "rgba(46, 204, 113, 0.12)"
+      : "rgba(255, 107, 107, 0.12)"};
+  border: 1px solid
+    ${({ $variant }) =>
+      $variant === "success"
+        ? "rgba(46, 204, 113, 0.4)"
+        : "rgba(255, 107, 107, 0.4)"};
 `;
 
 const Contact = () => {
   const form = useRef(null);  // ✅ Make sure the ref is initialized properly
+  const [status, setStatus] = useState("idle"); // idle | loading | success | error
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -130,6 +175,8 @@ const Contact = () => {
       console.error("Form reference is null.");
       return;
     }
+
+    setStatus("loading");
 
     emailjs
       .sendForm(
@@ -140,11 +187,12 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          alert("Message Sent");
+          setStatus("success");
           form.current.reset();  // ✅ Correct reset method
         },
         (error) => {
-          alert("Error: " + error.text);
+          console.error("EmailJS error:", error);
+          setStatus("error");
         }
       );
   };
@@ -169,7 +217,27 @@ const Contact = () => {
             rows={4}
             required
           />
-          <ContactButton type="submit" value="Send" />
+          {status === "loading" ? (
+            <ContactButton
+              as="button"
+              type="button"
+              disabled
+            >
+              <Spinner /> Sending...
+            </ContactButton>
+          ) : (
+            <ContactButton type="submit" value="Send" />
+          )}
+          {status === "success" && (
+            <StatusMessage $variant="success">
+              Message sent successfully! I'll get back to you soon.
+            </StatusMessage>
+          )}
+          {status === "error" && (
+            <StatusMessage $variant="error">
+              Something went wrong. Please try again later.
+            </StatusMessage>
+          )}
         </ContactForm>
       </Wrapper>
     </Container>
