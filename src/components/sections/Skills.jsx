@@ -57,7 +57,7 @@ const SkillsContainer = styled.div`
 `;
 const Skill = styled.div`
   width: 100%;
-  max-width: 500px;
+  max-width: 1000px;
   background-color: rgba(17, 25, 40, 0.83);
   border: 1px solid rgba(255, 255, 255, 0.125);
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
@@ -138,7 +138,7 @@ const Skills = () => {
                 <SkillList>
                   {skill.skills.map((item, index_x) => (
                     <SkillItem key={`skill-x-${index_x}`}>
-                      <SkillImage src={item.image} />
+                      {item.image && <SkillImage src={item.image} />}
                       {item.name}
                     </SkillItem>
                   ))}

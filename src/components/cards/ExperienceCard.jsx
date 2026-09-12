@@ -8,14 +8,24 @@ const Top = styled.div`
   max-width: 100%;
   gap: 12px;
 `;
-const Image = styled.img`
+const ImageWrapper = styled.div`
+  width: 50px;
   height: 50px;
   border-radius: 10px;
   margin-top: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
 
   @media only screen and (max-width: 768px) {
+    width: 40px;
     height: 40px;
   }
+`;
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(${({ $zoom }) => $zoom || 1});
 `;
 const Body = styled.div`
   width: 100%;
@@ -98,13 +108,25 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       icon={
-        <img
-          width="100%"
-          height="100%"
-          alt={experience.school}
-          style={{ borderRadius: "50%", objectFit: "cover" }}
-          src={experience.img}
-        />
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            borderRadius: "50%",
+            overflow: "hidden",
+          }}
+        >
+          <img
+            width="100%"
+            height="100%"
+            alt={experience.school}
+            style={{
+              objectFit: "cover",
+              transform: `scale(${experience.imgZoom || 1})`,
+            }}
+            src={experience.img}
+          />
+        </div>
       }
       contentStyle={{
         display: "flex",
@@ -124,7 +146,9 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
     >
       <Top>
-        <Image src={experience.img} />
+        <ImageWrapper>
+          <Image src={experience.img} $zoom={experience.imgZoom} />
+        </ImageWrapper>
         <Body>
           <Role>{experience.role}</Role>
           <Company>{experience.company}</Company>

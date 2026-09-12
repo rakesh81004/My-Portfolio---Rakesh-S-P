@@ -7,11 +7,11 @@ export const Bio = {
     "Shortfilm Maker"
   ],
   description:
-    "I am a passionate full-stack developer, creative designer, and visual storyteller, always eager to explore new challenges. With a strong problem-solving mindset, I craft efficient code, design visually compelling experiences, and occasionally bring ideas to life through film and media.",
+    "A strong Full-Stack Software Engineer with solid programming fundamentals and problem-solving skills, strategically leveraging AI for development and debugging. Experienced in scalable web and e-commerce applications with React.js, Next.js, TypeScript, Node.js, Strapi, and Shopify.",
   github: "https://github.com/rakesh81004",
   resume:
     "https://drive.google.com/file/d/1Wo1E69uFr3tlf-ZtaLJHFqUWdVg9gC1j/view?usp=sharing",
-  linkedin: "www.linkedin.com/in/rakesh-sp-37863b253",
+  linkedin: "https://www.linkedin.com/in/rakesh-sp-37863b253",
   twitter: "https://x.com/RakeshSP679388",
   insta: "https://www.instagram.com/rakesh_s_p___/",
   facebook: "https://www.facebook.com/profile.php?id=61558877683723",
@@ -32,20 +32,53 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
       },
       {
+        name: "JavaScript",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+      },
+      {
+        name: "TypeScript",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "React Js",
+        image:
+          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+      },
+      {
+        name: "Next.js",
+        image: "https://cdn.simpleicons.org/nextdotjs/ffffff",
+      },
+      {
         name: "HTML",
         image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
       },
       {
         name: "CSS",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
       },
       {
-        name: "JavaScript",
+        name: "Tailwind CSS",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg",
       },
-      
+      {
+        name: "Node Js",
+        image: "https://nodejs.org/static/images/logo.svg",
+      },
+      {
+        name: "Express",
+        image: "https://cdn.simpleicons.org/express/ffffff",
+      },
+      {
+        name: "Strapi",
+        image: "https://cdn.simpleicons.org/strapi",
+      },
+      {
+        name: "REST APIs",
+      },
       {
         name: "MySQL",
         image:
@@ -57,43 +90,106 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
       },
       {
-        name: "React Js",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+        name: "Prisma ORM",
+        image: "https://cdn.simpleicons.org/prisma/ffffff",
       },
-      { name: "Docker",
+      {
+        name: "Shopify",
+        image: "https://cdn.simpleicons.org/shopify",
+      },
+      {
+        name: "GTM",
+        image: "https://cdn.simpleicons.org/googletagmanager",
+      },
+      {
+        name: "Google Analytics",
+        image: "https://cdn.simpleicons.org/googleanalytics",
+      },
+      {
+        name: "Meta Pixel",
+        image: "https://cdn.simpleicons.org/meta",
+      },
+      {
+        name: "Statsig",
+      },
+      {
+        name: "Git",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+      },
+      {
+        name: "GitHub Actions",
+        image: "https://cdn.simpleicons.org/githubactions",
+      },
+      {
+        name: "Docker",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
       },
-      
       {
-        name: "Node Js",
+        name: "Figma",
         image:
-          "https://nodejs.org/static/images/logo.svg",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg",
       },
-      
+      {
+        name: "Miro",
+        image: "https://cdn.simpleicons.org/miro/ffffff",
+      },
+      {
+        name: "GIMP",
+        image: "https://cdn.simpleicons.org/gimp",
+      },
+      {
+        name: "Canva",
+        image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Canva_logo.svg",
+      },
+      {
+        name: "Spline",
+        image:
+          "https://ui-avatars.com/api/?name=Spline&background=FF3366&color=fff&bold=true&size=64",
+      },
     ],
   },
 ];
 export const experiences = [
   {
     id: 0,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwJbBBLtwaMiizbNFAwclhKaxLq47EAIPiTQ&s",
-    role: "Backend Intern",
-    company: "Icanio Technologies",
-    date: "July 2025 - Aug 2025",
-    desc: "Engineered robust RESTful APIs using Node.js, Express, and MySQL during internship at ICANIO. Structured scalable backend with modular controllers and Prisma ORM for efficient database management. Containerized the application using Docker for seamless deployment and environment consistency. Validated endpoints and workflows using Postman with detailed request collections and test cases. Focused on maintainable architecture, secure routing, and real-time debugging for production readiness.",
+    img: "https://drive.google.com/thumbnail?id=1oZ_HJR41GllEGCM1ZaS4Boo3JFugfWTQ&sz=w1000",
+    role: "Software Engineer (Viome)",
+    company: "Invictus Data",
+    date: "January 2026 - September 2026",
+    desc: "Built the Next.js, React.js, JavaScript, and TypeScript storefront using App Router, SSR/ISR, REST APIs, and production routing. Integrated Strapi (headless CMS) and Shopify Storefront API for e-commerce: PDPs, subscriptions, cart/checkout, HSA/FSA, pricing, and promotions. Designed a component/section registry for composable, multi-variant landing pages with CMS webhooks, caching, and on-demand revalidation. Implemented SEO, GTM, Meta Pixel/CAPI, Statsig A/B testing, WCAG accessibility, Sentry, and CI/CD-ready production monitoring.",
     skills: [
-      "Node JS",
-      "Express JS",
-      "ReactJS",
-      "Postman API",
-      "Docker",
-      "Vercel",
-      
+      "Next.js",
+      "React Js",
+      "TypeScript",
+      "Strapi",
+      "Shopify",
+      "GTM",
+      "Meta Pixel",
+      "Statsig",
     ],
+  },
+  {
+    id: 1,
+    img: "https://drive.google.com/thumbnail?id=19A0aUp6DHOWHBabbquxIxXPbbPqXMTHy&sz=w1000",
+    imgZoom: 2.2,
+    role: "Frontend Developer (Part Time)",
+    company: "Nexus",
+    date: "1 Month",
+    desc: "Built responsive landing page UI and reusable components with Next.js, React, and TypeScript. Configured Next.js dynamic routing, SSR, and SEO metadata to improve page visibility.",
+    skills: ["Next.js", "React Js", "TypeScript"],
+  },
+  {
+    id: 2,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwJbBBLtwaMiizbNFAwclhKaxLq47EAIPiTQ&s",
+    role: "Node JS Intern",
+    company: "Icanio Technologies",
+    date: "July 2025",
+    desc: "Built JWT-secured REST APIs using Node.js, Express, and MongoDB with role-based access. Dockerized services and tested APIs using Postman in an Agile environment.",
+    skills: ["Node JS", "Express JS", "MongoDB", "JWT", "Docker", "Postman API"],
     doc: "https://docs.google.com/document/d/1ypNX9lB4PEYdkD_6shTmntQsY-3IY74e/edit?usp=sharing&ouid=105049889289764758112&rtpof=true&sd=true",
-  }
+  },
 ];
 export const education = [
   {
@@ -101,8 +197,8 @@ export const education = [
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQk3BPb81_4LDeKsnddruXhnmW1OSOSYlxtA&s",
     school: "Government  College Of Engineering - Tirunelveli",
     date: "Nov 2022 - Jun 2026",
-    grade: " 8.6 CGPA",
-    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering in Government College Of Engineering ,Tirunelveli. I have completed 5 semesters and have a CGPA of 8.6 . I have solid knowledge of Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
+    grade: " 8.74 CGPA",
+    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering in Government College Of Engineering ,Tirunelveli. I have completed 5 semesters and have a CGPA of 8.74 . I have solid knowledge of Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
     degree: "Bachelor of Engineering - BE, Computer Science and Engineering",
   },
   {
@@ -126,6 +222,27 @@ export const education = [
 ];
 
 export const projects = [
+  { id: 16,
+    title: "DSA Animator (NodeSimulator)",
+    date: "",
+    description:
+      "An interactive DSA platform that visually animates algorithm execution and data structures, letting users save and revisit personalized animations via persistent, cross-device storage.",
+    image: "https://drive.google.com/thumbnail?id=1qLIpuv2ZyF6hUnidG52_y089mMjM1uZf&sz=w1000",
+    tags: [
+      "React JS",
+      "TypeScript",
+      "Node JS",
+      "Express JS",
+      "MySQL",
+      "JWT",
+      "bcryptjs",
+      "Zustand",
+      "Vite",
+      "Tailwind CSS",
+    ],
+    category: "Web App",
+    github: "https://github.com/rakesh81004/NodeSimulator",
+  },
   {
     id: 4,
     title: "AI - Powered Stampede Detection System",
@@ -134,7 +251,7 @@ export const projects = [
       "An AI-based real-time crowd density monitoring system designed to detect and prevent potential stampedes using computer vision, machine learning, and automated alerts.",
     image:
       "https://github.com/rakesh81004/AI-Powered-Stampede-Detector/blob/main/Critical%20Density%20-%20Stampede%20Detection%20Screenshot%20.png?raw=true",
-    tags: ["Python", "YOLOv8 Model", "OpenCV Library", "SMTP"],
+    tags: ["Python", "YOLOv8 Model", "OpenCV Library", "SMTP", "Threading"],
     category: "AI & ML",
     github: "https://github.com/rakesh81004/AI-Powered-Stampede-Detector.git",
     webapp: "https://github.com/rakesh81004/AI-Powered-Stampede-Detector.git",
@@ -158,19 +275,21 @@ export const projects = [
     webapp: "https://nutriraki-health-tracker.netlify.app/",
   },
   { id: 11,
-    title: "Freelancer API - Service Booking PLatform Backend",
+    title: "Freelance Hiring Platform",
     date: " June 2025 ",
     description:
-      "A robust Freelancer API using Node.js, Express, and MySQL to manage users, projects, and bookings efficiently",
+      "A scalable REST API for a freelance hiring and service booking platform, with JWT authentication, bcrypt hashing, Prisma ORM, and MySQL for booking management. Architected with modular routes, controllers, and middleware, containerized for deployment.",
     image:
       "https://github.com/rakesh81004/Freelance-Website-API/blob/main/Postman%20API%20Description/Project%20Overview.PNG?raw=true",
     tags: [
+      "React JS",
+      "TypeScript",
       "Node JS",
+      "Express JS",
       "MySQL",
       "Prisma ORM",
       "JWT",
-      "Docker",
-
+      "Postman API",
     ],
     category: "Web App",
     github: "https://github.com/rakesh81004/Freelance-Website-API",
