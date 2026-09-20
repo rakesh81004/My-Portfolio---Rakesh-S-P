@@ -198,7 +198,7 @@ export const education = [
     school: "Government  College Of Engineering - Tirunelveli",
     date: "Nov 2022 - Jun 2026",
     grade: " 8.74 CGPA",
-    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering in Government College Of Engineering ,Tirunelveli. I have completed 5 semesters and have a CGPA of 8.74 . I have solid knowledge of Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
+    desc: "I have completed my Bachelor's degree in Computer Science and Engineering from Government College of Engineering, Tirunelveli, with a CGPA of 8.74. I have solid knowledge of Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
     degree: "Bachelor of Engineering - BE, Computer Science and Engineering",
   },
   {
