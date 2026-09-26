@@ -222,6 +222,23 @@ export const education = [
 ];
 
 export const projects = [
+  { id: 17,
+    title: "LLMRaki - AI Coding Agent & LLM Workspace",
+    date: "",
+    description:
+      "A desktop IDE (Electron + React + Monaco) with a built-in AI chat assistant. Uses Gemini's free tier for zero-token queries and minor edits, with local workspace context matching for query payloads that cut token usage by 12 percentage points (~2.4k tokens).",
+    image: "https://drive.google.com/thumbnail?id=1EzA3xyCWtnzzAQlTsgkyzxB-BkxmM11S&sz=w1000",
+    tags: [
+      "Electron",
+      "React JS",
+      "TypeScript",
+      "Gemini API",
+      "Monaco Editor",
+      "Node JS",
+    ],
+    category: "Web App",
+    github: "https://github.com/rakesh81004/LLMRaki",
+  },
   { id: 16,
     title: "DSA Animator (NodeSimulator)",
     date: "",
