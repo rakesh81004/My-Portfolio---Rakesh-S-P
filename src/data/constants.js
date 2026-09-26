@@ -10,7 +10,7 @@ export const Bio = {
     "A strong Full-Stack Software Engineer with solid programming fundamentals and problem-solving skills, strategically leveraging AI for development and debugging. Experienced in scalable web and e-commerce applications with React.js, Next.js, TypeScript, Node.js, Strapi, and Shopify.",
   github: "https://github.com/rakesh81004",
   resume:
-    "https://drive.google.com/file/d/1Wo1E69uFr3tlf-ZtaLJHFqUWdVg9gC1j/view?usp=sharing",
+    "https://drive.google.com/file/d/11Eb4XW8C1nBJJ9tl9mvpiniUUO_Ipdz9/view",
   linkedin: "https://www.linkedin.com/in/rakesh-sp-37863b253",
   twitter: "https://x.com/RakeshSP679388",
   insta: "https://www.instagram.com/rakesh_s_p___/",
