@@ -221,6 +221,88 @@ export const education = [
   },
 ];
 
+export const certifications = [
+  {
+    id: 0,
+    title: "Programming In Java",
+    issuer: "NPTEL",
+    logo: "/nptel-logo.png",
+    date: "Issued May 2025",
+    credentialId: "NPTEL25CS57S1252700285",
+    credentialUrl:
+      "https://nptel.ac.in/noc/E_Certificate/NPTEL25CS57S125270028504435934",
+    skills: [
+      "Core Java",
+      "Object-Oriented Programming (OOP)",
+      "Classes & Objects",
+      "Inheritance",
+      "Polymorphism",
+      "Exception Handling",
+      "Collections Framework",
+      "Multithreading",
+    ],
+  },
+  {
+    id: 1,
+    title: "Fundamentals Of UI UX Design",
+    issuer: "Microsoft",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+    date: "Issued Sep 2024",
+    credentialId: "L68EDMA7KAIA",
+    credentialUrl:
+      "https://www.coursera.org/account/accomplishments/verify/L68EDMA7KAIA",
+    skills: [
+      "User Interface Design",
+      "User Experience Design (UED)",
+      "Wireframing",
+      "Prototyping",
+      "User Research",
+      "Usability Testing",
+      "Interaction Design",
+      "Design Thinking",
+    ],
+  },
+  {
+    id: 2,
+    title: "The Front End Development",
+    issuer: "Meta",
+    logo: "https://cdn.simpleicons.org/meta",
+    date: "Issued Jun 2024",
+    credentialId: "VC7RYH3HCBUA",
+    credentialUrl:
+      "https://www.coursera.org/account/accomplishments/verify/VC7RYH3HCBUA",
+    skills: [
+      "HTML5",
+      "Cascading Style Sheets (CSS)",
+      "JavaScript",
+      "React",
+      "Responsive Web Design",
+      "Bootstrap",
+      "Web Accessibility",
+      "Version Control (Git)",
+    ],
+  },
+  {
+    id: 3,
+    title: "TCS iON Career Edge - Soft Skill Fundamentals",
+    issuer: "Tata Consultancy Services",
+    logo: "https://cdn.simpleicons.org/tcs",
+    date: "Issued Oct 2024",
+    credentialId: "119854-27082738-1016",
+    credentialUrl:
+      "https://drive.google.com/file/d/1QfUfm4pClxAuvWsJCGlkthy3vkjaMEHg/view",
+    skills: [
+      "Presentation Skills",
+      "Communication",
+      "Interpersonal Skills",
+      "Email Etiquette",
+      "Teamwork",
+      "Time Management",
+      "Business Communication",
+    ],
+  },
+];
+
 export const projects = [
   { id: 17,
     title: "LLMRaki - AI Coding Agent & LLM Workspace",
