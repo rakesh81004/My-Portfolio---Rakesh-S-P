@@ -37,7 +37,7 @@ function parseDevice(ua) {
   return `${browser} on ${os} (${deviceType})`;
 }
 
-async function sendEmailNotification({ location, time, totalVisits }) {
+async function sendEmailNotification({ location, device, time }) {
   const { EMAILJS_SERVICE_ID, EMAILJS_VISITOR_TEMPLATE_ID, EMAILJS_PUBLIC_KEY, SITE_URL } =
     process.env;
   if (!EMAILJS_SERVICE_ID || !EMAILJS_VISITOR_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) return;
@@ -54,8 +54,8 @@ async function sendEmailNotification({ location, time, totalVisits }) {
       user_id: EMAILJS_PUBLIC_KEY,
       template_params: {
         location,
+        device,
         time,
-        total_visits: totalVisits,
       },
     }),
   });
@@ -69,32 +69,18 @@ const handler = async (req, context) => {
   try {
     const ip = context.ip || "unknown";
     const device = parseDevice(req.headers.get("user-agent"));
-
-    const visitsStore = getStore("visitor-log");
-    const throttleStore = getStore("visitor-throttle");
-
     const location = await lookupLocation(ip);
     const now = new Date();
-    const key = `visit:${now.toISOString()}:${Math.random().toString(36).slice(2, 8)}`;
 
-    await visitsStore.setJSON(key, {
-      time: now.toISOString(),
-      ip: ip.replace(/\.\d+$/, ".xxx"),
-      location,
-      device,
-      tag: null,
-    });
-
-    const { blobs } = await visitsStore.list({ prefix: "visit:" });
-    const totalVisits = blobs.length;
-
+    const throttleStore = getStore("visitor-throttle");
     const lastNotifiedRaw = await throttleStore.get(ip);
     const lastNotified = lastNotifiedRaw ? Number(lastNotifiedRaw) : 0;
+
     if (Date.now() - lastNotified > NOTIFY_THROTTLE_MS) {
       await sendEmailNotification({
         location,
+        device,
         time: now.toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
-        totalVisits,
       });
       await throttleStore.set(ip, String(Date.now()));
     }

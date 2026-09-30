@@ -1,7 +1,7 @@
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
 import StarCanvas from "./components/canvas/Stars";
@@ -13,7 +13,6 @@ import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import ProjectDetails from "./components/Dialog/ProjectDetails";
-import Dashboard from "./pages/Dashboard";
 import { useEffect, useState } from "react";
 
 function useVisitLogger() {
@@ -47,50 +46,39 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 
-function Portfolio() {
+function App() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   useVisitLogger();
   return (
-    <>
-      <Navbar />
-      <Body>
-        <StarCanvas />
-        <AnimatePresence>
-          <div>
-            <Hero />
-            <Wrapper>
-              <Skills />
-              <Experience />
-            </Wrapper>
-            <Projects openModal={openModal} setOpenModal={setOpenModal} />
-            <Wrapper>
-              <Education />
-              <Certifications />
-              <Contact />
-            </Wrapper>
-            <Footer />
-
-            {openModal.state && (
-              <ProjectDetails
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            )}
-          </div>
-        </AnimatePresence>
-      </Body>
-    </>
-  );
-}
-
-function App() {
-  return (
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
-        <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/*" element={<Portfolio />} />
-        </Routes>
+        <Navbar />
+        <Body>
+          <StarCanvas />
+          <AnimatePresence>
+            <div>
+              <Hero />
+              <Wrapper>
+                <Skills />
+                <Experience />
+              </Wrapper>
+              <Projects openModal={openModal} setOpenModal={setOpenModal} />
+              <Wrapper>
+                <Education />
+                <Certifications />
+                <Contact />
+              </Wrapper>
+              <Footer />
+
+              {openModal.state && (
+                <ProjectDetails
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                />
+              )}
+            </div>
+          </AnimatePresence>
+        </Body>
       </BrowserRouter>
     </ThemeProvider>
   );
